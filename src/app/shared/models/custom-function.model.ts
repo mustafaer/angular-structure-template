@@ -10,7 +10,7 @@ export class CustomFunctions {
         return localStorage.getItem(key.toString());
     }
 
-    setLocalStorage({key = '', value = ''}): void {
+    setLocalStorage(key = '', value = ''): void {
         localStorage.setItem(key.toString(), value.toString());
     }
 

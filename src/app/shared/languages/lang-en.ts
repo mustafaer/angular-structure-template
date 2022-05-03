@@ -6,4 +6,8 @@ export const LANG_EN_TRANS = {
     dashboard: 'Dashboard',
     tokenExpire: 'Your session is expired!',
     logoutError: 'Logout Error',
+    signIn: 'Sign In',
+    username: 'Username',
+    password: 'Password',
+    iForgotMyPassword: 'I forgot my password',
 }

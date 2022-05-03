@@ -12,7 +12,7 @@ export class TranslateService {
 
     public get currentLang(): string {
         if (this.currentLangValue == null) {
-            this.customFunctions.setLocalStorage({key: this.customFunctions.storageItems.lang, value: 'en'})
+            this.customFunctions.setLocalStorage(this.customFunctions.storageItems.lang, 'en');
             return 'en'; // if localeStorage is null for language, set as 'en'
         } else {
             if (this.currentLangValue.length > 2) {
@@ -31,10 +31,7 @@ export class TranslateService {
         // private perform translation
         const translation = key;
 
-        if (
-            this.translations[this.currentLang] &&
-            this.translations[this.currentLang][key]
-        ) {
+        if (this.translations[this.currentLang] && this.translations[this.currentLang][key]) {
             return this.translations[this.currentLang][key];
         }
 

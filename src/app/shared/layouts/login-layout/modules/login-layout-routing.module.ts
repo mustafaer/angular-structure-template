@@ -7,11 +7,13 @@ const routes: Routes = [
         path: '', component: LoginLayoutComponent,
         children: [
             {
+                path: ':page', loadChildren: () => import('../../../components/login-management/modules/login-management.module')
+                    .then(m => m.LoginManagementModule),
+            },
+            {
                 path: '',
-                loadChildren: () => import('../../../../components/login/modules/login.module').then(m => m.LoginModule)
-            }, {
-                path: '**',
-                redirectTo: '/'
+                loadChildren: () => import('../../../components/login-management/modules/login-management.module')
+                    .then(m => m.LoginManagementModule),
             },
         ],
     },

@@ -160,7 +160,7 @@ export class ServerConnectionsService {
         const tempLang = this.translateService.currentLang;
         localStorage.clear();
         sessionStorage.clear();
-        this.customFunctions.setLocalStorage({key: this.customFunctions.storageItems.lang, value: tempLang});
+        this.customFunctions.setLocalStorage(this.customFunctions.storageItems.lang, tempLang);
         window.location.href = window.location.origin + '/login';
     }
 
@@ -170,7 +170,7 @@ export class ServerConnectionsService {
             this.notification.error(this.translate.transform('tokenExpire'));
             this.ClearSession();
         } else if (err.status === 401) {
-            // this.notification.error(this.translate.transform('loginErrorInfo'));
+            this.notification.error(this.translate.transform('loginErrorInfo'));
         }
         return (error);
     }

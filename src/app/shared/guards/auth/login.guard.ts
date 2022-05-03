@@ -19,7 +19,7 @@ export class LoginGuard implements CanActivate {
         const token = this.customFunctions.getLocalStorage(this.customFunctions.storageItems.token);
         if (token) {
             this.authService.verifyToken(token).subscribe(() => {
-                this.customFunctions.setLocalStorage({key: this.customFunctions.storageItems.token, value: token});
+                this.customFunctions.setLocalStorage(this.customFunctions.storageItems.token,token);
                 this.router.navigate(['/']).then();
                 responseStatus = true;
             }, () => {

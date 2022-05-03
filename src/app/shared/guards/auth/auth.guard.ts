@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
         const token = this.customFunctions.getLocalStorage(this.customFunctions.storageItems.token);
 
         return this.authService.verifyToken(token).pipe(map(() => {
-                this.customFunctions.setLocalStorage({key: this.customFunctions.storageItems.token, value: token});
+                this.customFunctions.setLocalStorage( this.customFunctions.storageItems.token, token);
                 return true;
             }),
             catchError((err: any) => {

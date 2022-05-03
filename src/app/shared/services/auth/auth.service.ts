@@ -40,7 +40,7 @@ export class AuthService {
         const tempLang = this.translateService.currentLang;
         localStorage.clear();
         sessionStorage.clear();
-        this.customFunctions.setLocalStorage({key: this.customFunctions.storageItems.lang, value: tempLang})
+        this.customFunctions.setLocalStorage(this.customFunctions.storageItems.lang, tempLang)
         window.location.href = window.location.origin + '/login';
     }
 }
