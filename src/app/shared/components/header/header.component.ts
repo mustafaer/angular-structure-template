@@ -6,12 +6,17 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  isSidebarOpen = false;
   @Output() toggleSidebarOp = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  toggleSidebar(): void {
+    this.isSidebarOpen = !this.isSidebarOpen;
+    this.toggleSidebarOp.emit();
+  }
 }

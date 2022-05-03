@@ -1,14 +1,14 @@
 import {RouterModule, Routes} from "@angular/router";
-import {DashboardLayoutComponent} from "../dashboard-layout.component";
 import {NgModule} from "@angular/core";
+import {LoginLayoutComponent} from "../login-layout.component";
 
 const routes: Routes = [
     {
-        path: '', component: DashboardLayoutComponent,
+        path: '', component: LoginLayoutComponent,
         children: [
             {
-                path: 'dashboard',
-                loadChildren: () => import('../../../../components/dashboard/modules/dashboard.module').then(m => m.DashboardModule)
+                path: '',
+                loadChildren: () => import('../../../../components/login/modules/login.module').then(m => m.LoginModule)
             }, {
                 path: '**',
                 redirectTo: '/'
@@ -21,5 +21,5 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class DashboardLayoutRoutingModule {
+export class LoginLayoutRoutingModule {
 }

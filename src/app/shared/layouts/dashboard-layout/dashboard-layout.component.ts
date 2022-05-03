@@ -18,10 +18,12 @@ export class DashboardLayoutComponent implements OnInit {
     }
 
     toggleSidebar(): void {
-        if (this.sidebarIsOpen) {
+        if (!this.sidebarIsOpen) {
             this.openNav();
+            this.sidebarIsOpen = true;
         } else {
             this.closeNav();
+            this.sidebarIsOpen = false;
         }
     }
 

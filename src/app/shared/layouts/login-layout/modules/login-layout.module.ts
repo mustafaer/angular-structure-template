@@ -1,28 +1,26 @@
 import {CommonModule} from "@angular/common";
-import {DashboardLayoutComponent} from "../dashboard-layout.component";
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
-import {DashboardLayoutRoutingModule} from "./dashboard-layout-routing.module";
+import {LoginLayoutRoutingModule} from "./login-layout-routing.module";
 import {TranslatePipeModule} from "../../../pipes/translate/translate-pipe.module";
 import {AuthService} from "../../../services/auth/auth.service";
-import {HeaderModule} from "../../../components/header/modules/header.module";
+import {LoginLayoutComponent} from "../login-layout.component";
 
 @NgModule({
     declarations: [
-        DashboardLayoutComponent
+        LoginLayoutComponent
     ],
     imports: [
         CommonModule,
-        DashboardLayoutRoutingModule,
+        LoginLayoutRoutingModule,
         FormsModule,
         FormsModule,
         TranslatePipeModule,
-        HeaderModule
     ],
     exports: [
-        DashboardLayoutComponent,
+        LoginLayoutComponent,
     ],
     providers: [AuthService]
 })
-export class DashboardLayoutModule {
+export class LoginLayoutModule {
 }

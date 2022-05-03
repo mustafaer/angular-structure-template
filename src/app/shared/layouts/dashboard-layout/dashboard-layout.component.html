@@ -1,28 +1,24 @@
 <app-header (toggleSidebarOp)="toggleSidebar()"></app-header>
-<br>
-<br>
-<br>
-<div class="sidenav sidebar shadow" id="mySidenav">
-    <hr class="mt-0">
-    <div class="sidebar">
-        <ul class="navigation-menu p-0">
-            <li>
-                <a [routerLink]="['dashboard']" routerLinkActive="color-black">
-                    <span class="link-title">{{'Dashboard' | translate}}</span>
-                </a>
-            </li>
-            <li>
-                <a [href]="'http://mustafaer.net'">
-                    <span class="link-title">{{'externalLink' | translate}}</span>
-                </a>
-            </li>
-            <li>
-                <a [href]="'#collapse-level-1'"
-                   aria-expanded="false" data-toggle="collapse">
-                    <span class="link-title">{{'Container Menu' | translate}}</span>
-                    <i class="link-icon"></i>
-                </a>
-                <ul id="collapse-level-1" class="collapse navigation-submenu py-0 px-2">
+<div class="sidebar" id="mySidenav">
+    <ul class="navigation-menu p-0">
+        <li>
+            <a [routerLink]="['dashboard']" routerLinkActive="color-black">
+                <span class="link-title">{{'Dashboard' | translate}}</span>
+            </a>
+        </li>
+        <li>
+            <a [href]="'http://mustafaer.net'">
+                <span class="link-title">{{'externalLink' | translate}}</span>
+            </a>
+        </li>
+        <li>
+            <a data-bs-toggle="collapse" href="#collapse-level-1" aria-expanded="false"
+               aria-controls="collapseExample">
+                <span class="link-title">{{'Container Menu' | translate}}</span>
+                <i class="link-icon"></i>
+            </a>
+            <div class="collapse" id="collapse-level-1">
+                <ul class="navigation-submenu py-0 px-2">
                     <li>
                         <a [routerLink]="['dashboard']" routerLinkActive="color-black">
                             <span class="link-title">{{'subItem' | translate}}</span>
@@ -34,32 +30,9 @@
                         </a>
                     </li>
                 </ul>
-            </li>
-        </ul>
-    </div>
-    <div *ngIf="sidebarIsOpen" class="sidebar_footer dropup">
-        <div class="user-account dropdown-menu">
-            <a [routerLink]="['dashboard']"
-               class="pb-0"
-               routerLinkActive="color-black">
-                <span class="link-title">{{'bottomMenuItem' | translate}}</span>
-            </a>
-            <a (click)="logOut()" class="btn btn-primary btn-logout text-white" id="logout">{{'logOut' | translate}}</a>
-        </div>
-        <div aria-expanded="false" aria-haspopup="true" class="btn-group admin-access-level" data-toggle="dropdown">
-            <div class="avatar">
-                <img *ngIf="profilePicture" [src]="profilePicture" alt="profile picture"
-                     class="profile-img img-thumbnail user-profile-image" height="50" width="50">
             </div>
-            <div class="user-type-wrapper">
-                <p class="user_name text-truncate">{{userName}}</p>
-                <div class="d-flex align-items-center">
-                    <small class="user_access_level text-truncate">{{'littleInformation' | translate}}</small>
-                </div>
-            </div>
-            <i class="arrow mdi mdi-chevron-right"></i>
-        </div>
-    </div>
+        </li>
+    </ul>
 </div>
 <div id="main">
     <router-outlet></router-outlet>
