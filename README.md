@@ -18,8 +18,9 @@ Structure Template For Angular
 ## General Properties
 * Auth guard
 * Login guard
-* Translate service
 * Notification service
+* Translate service
+* Translate pipe
 * Split pipe
 -----------------------------------------------------------------------------------------------------
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
