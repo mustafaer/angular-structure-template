@@ -5,7 +5,7 @@ Structure Template For Angular
 * fontawesome-free 6
 * izitoast 1
 
-##Existing Properties
+## Existing Properties
 ### Dashboard Layout
 * Header
 * Sidebar
