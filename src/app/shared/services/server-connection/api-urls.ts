@@ -7,6 +7,8 @@ export const serverAddress = requestProtocol + environment.baseUrl;
 export const api = {
     login: {
         login: serverAddress + 'login',
+        passwordRequest: serverAddress + 'login',
+        passwordReset: serverAddress + 'login',
         logout: serverAddress + 'logout',
     },
     token: {
