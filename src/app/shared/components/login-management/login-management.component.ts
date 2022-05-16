@@ -20,6 +20,7 @@ export class LoginManagementComponent implements OnInit {
 
     ngOnInit(): void {
         const page = this.route.snapshot.paramMap.get('page');
+        console.log(page)
         if (page && this.components.includes(page)) {
             this.activeComponent = page;
         } else {

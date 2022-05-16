@@ -5,6 +5,7 @@ import {TranslatePipeModule} from "../../../pipes/translate/translate-pipe.modul
 import {LoginManagementComponent} from "../login-management.component";
 import {LoginModule} from "../components/login/modules/login.module";
 import {LoginManagementRoutingModule} from "./login-management-routing.module";
+import {PasswordRequestModule} from "../components/password-request/modules/password-request.module";
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import {LoginManagementRoutingModule} from "./login-management-routing.module";
         TranslatePipeModule,
         FormsModule,
         LoginManagementRoutingModule,
-        LoginModule
+        LoginModule,
+        PasswordRequestModule
     ],
     exports: [
         LoginManagementComponent

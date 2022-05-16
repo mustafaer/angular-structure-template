@@ -12,7 +12,6 @@ Structure Template For Angular
 * Dashboard
 ### Login Layout
 * Login 
-* Password reset
 * Password request 
 
 ## General Properties
